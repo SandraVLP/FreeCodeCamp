@@ -4,20 +4,15 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div id="quote-box">
+        <div>
+        <div id="text"> "I have just three things to teach: simplicity, patience, compassion. These three are your greatest treasures."</div>
+        <div id="author">Lao Tzu</div>
+        </div>
+        <button id="new-quote">Get new Quote</button>
+        <a href="#" id="tweet-quote">Tweet Quote</a>
+        
+      </div>
     </div>
   );
 }
