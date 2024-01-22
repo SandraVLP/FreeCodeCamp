@@ -1,9 +1,29 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { Button } from "react-bootstrap";
-import { Twitter } from 'react-bootstrap-icons';
+import { Twitter } from "react-bootstrap-icons";
+import { useEffect, useState } from "react";
 
 function App() {
+const [quote, setQuote] = useState({});
+
+  useEffect(() => {
+    getQuote();
+  }, []);
+
+  const getQuote = () => {
+    fetch("https://api.quotable.io/random ")
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log(`Ошибка; ${err}`);
+      });
+  };
+
   return (
     <div className="App">
       <div id="quote-box">
@@ -25,7 +45,7 @@ function App() {
           className="btn btn-lg outline-primary"
           target="_blank"
         >
-         <Twitter color="royalblue" size={96} />
+          <Twitter color="royalblue" size={96} />
           Tweet Quote
         </a>
       </div>
