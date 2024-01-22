@@ -20,12 +20,14 @@ const [quote, setQuote] = useState({});
         setQuote({
         author: data.author,
         text: data.content,
+        tweetUrl: "https://twitter.com/intent/tweet/?text=" + data.content.replace(/ /g, "+")
       })
       })
       .catch((err) => {
         console.log(`Ошибка; ${err}`);
       });
   };
+
 
   return (
     <div className="App">
@@ -41,7 +43,7 @@ const [quote, setQuote] = useState({});
         </Button>
 
         <a
-          href="#"
+          href={quote.tweetUrl}
           id="tweet-quote"
           className="btn btn-lg outline-primary"
           target="_blank"
