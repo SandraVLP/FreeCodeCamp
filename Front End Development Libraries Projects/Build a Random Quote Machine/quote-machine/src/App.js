@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { Button } from "react-bootstrap";
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { Twitter } from "react-bootstrap-icons";
 import { useEffect, useState } from "react";
 
@@ -38,19 +39,16 @@ const [quote, setQuote] = useState({});
           </div>
           <div id="author">  {quote.author}</div>
         </div>
+        <ButtonGroup size="lg" className="mb-2">
         <Button id="new-quote" variant="outline-primary" onClick={getQuote}>
           Get new Quote
         </Button>
 
-        <a
-          href={quote.tweetUrl}
-          id="tweet-quote"
-          className="btn btn-lg outline-primary"
-          target="_blank"
-        >
-          <Twitter color="royalblue" size={96} />
+       <Button href={quote.tweetUrl}  id="tweet-quote" variant="primary">
           Tweet Quote
-        </a>
+        <Twitter color="white" size={30} />
+        </Button> 
+        </ButtonGroup>
       </div>
     </div>
   );
