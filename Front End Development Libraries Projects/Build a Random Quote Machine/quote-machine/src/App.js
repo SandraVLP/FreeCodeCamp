@@ -36,7 +36,7 @@ const [quote, setQuote] = useState({});
           </div>
           <div id="author">  {quote.author}</div>
         </div>
-        <Button id="new-quote" variant="outline-primary">
+        <Button id="new-quote" variant="outline-primary" onClick={getQuote}>
           Get new Quote
         </Button>
 
