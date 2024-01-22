@@ -32,9 +32,9 @@ const [quote, setQuote] = useState({});
 
 
   return (
-    <div className="App">
+    <div className="App" id="app">
       <Container id="quote-box">
-        <Row className="justify-content-md-center" >
+        <Row id="quote-row" className="justify-content-md-center" >
           <div id="text">
             {quote.text}
           </div>
