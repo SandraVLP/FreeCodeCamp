@@ -17,7 +17,10 @@ const [quote, setQuote] = useState({});
         return res.json();
       })
       .then((data) => {
-        console.log(data);
+        setQuote({
+        author: data.author,
+        text: data.content,
+      })
       })
       .catch((err) => {
         console.log(`Ошибка; ${err}`);
@@ -29,11 +32,9 @@ const [quote, setQuote] = useState({});
       <div id="quote-box">
         <div>
           <div id="text">
-            {" "}
-            "I have just three things to teach: simplicity, patience,
-            compassion. These three are your greatest treasures."
+            {quote.text}
           </div>
-          <div id="author">Lao Tzu</div>
+          <div id="author">  {quote.author}</div>
         </div>
         <Button id="new-quote" variant="outline-primary">
           Get new Quote
