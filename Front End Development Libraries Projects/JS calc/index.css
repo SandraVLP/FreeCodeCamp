@@ -11,14 +11,28 @@ body{
     border: 2px solid #47476b;
     padding: 5px;
     background: black;
-    width: 320px;
+    display: flex;
+    flex-direction: column;
   }
 
  #buttons {
      display: grid;
      justify-content: center;
      align-items: center;
-     grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
-     gap: 12px;
+     grid-template-columns: auto auto auto auto;
+     /* Два ряда */
+     grid-template-rows: auto auto;
+     /* Автоматическое размещение в ряд */
+     grid-auto-flow: row;
+     /* Отступы между ячейками */
+     gap: 2px;
 
  } 
+
+ #btnAC {
+     grid-column: span 2;
+ }
+
+ #btnR {
+    grid-column: span 3;
+}
