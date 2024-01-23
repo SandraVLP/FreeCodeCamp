@@ -1,6 +1,7 @@
 
 import './App.css';
 import { useState } from 'react';
+import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
 
 function App() {
 
@@ -12,8 +13,8 @@ function App() {
   return (
     <div className="App">
       <div className='container'>
- <textarea id="editor" onChange={handleChange} placeholder='Text'></textarea>
- <div id="preview">{text}</div>
+ <textarea id="editor" onChange={handleChange} placeholder='Text' value={text}></textarea>
+ <div id="preview">{marked.parse(text)}</div>
 
  </div>
     </div>
