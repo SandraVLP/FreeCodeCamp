@@ -29,10 +29,10 @@ body{
 
  } 
 
- #btnAC {
-     grid-column: span 2;
+ #equals {
+     grid-column: span 3;
  }
 
- #btnR {
-    grid-column: span 3;
+ #clear {
+    grid-column: span 2;
 }
