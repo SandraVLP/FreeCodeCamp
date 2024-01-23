@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { useState } from 'react';
 
@@ -11,8 +11,11 @@ function App() {
   }
   return (
     <div className="App">
- <textarea id="editor" onChange={handleChange}></textarea>
+      <div className='container'>
+ <textarea id="editor" onChange={handleChange} placeholder='Text'></textarea>
  <div id="preview">{text}</div>
+
+ </div>
     </div>
   );
 }
