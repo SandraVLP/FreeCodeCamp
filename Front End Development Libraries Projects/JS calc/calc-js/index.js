@@ -5,3 +5,10 @@ function display(value){
     return value
 
 }
+
+
+function clearDisplay(){
+
+    document.getElementById('display').value = ''
+
+}
