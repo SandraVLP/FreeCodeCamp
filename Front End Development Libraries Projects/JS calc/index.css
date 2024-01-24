@@ -32,7 +32,13 @@ body{
  .btn {
      height: 65px;
      font-size: 20px;
+     cursor: pointer;
  }
+
+ .btn:hover {
+border: 1px solid  #2e2e73;
+background-color: aliceblue;
+}
 
  #equals {
      grid-column: span 3;
