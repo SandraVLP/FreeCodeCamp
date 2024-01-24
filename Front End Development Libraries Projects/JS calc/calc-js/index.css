@@ -1,0 +1,61 @@
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:beige;
+    font-family:"Times New Roman", Georgia, Serif;
+  }
+
+  #container {
+    width: 320px;
+    border: 2px solid #47476b;
+    padding: 5px;
+    background: black;
+    display: flex;
+    flex-direction: column;
+  }
+
+ #buttons {
+     display: grid;
+     align-items: center;
+     grid-template-columns: auto auto auto auto;
+     /* Два ряда */
+     grid-template-rows: auto auto;
+     /* Автоматическое размещение в ряд */
+     grid-auto-flow: row;
+     /* Отступы между ячейками */
+     gap: 2px;
+
+ } 
+
+ .btn {
+     height: 65px;
+     font-size: 20px;
+     cursor: pointer;
+ }
+
+ .btn:hover {
+
+background-color: aliceblue;
+}
+
+ #equals {
+     grid-column: span 3;
+ }
+
+ #clear {
+    grid-column: span 2;
+}
+
+.formulaScreen {
+    width: 312px;
+    min-height: 20px;
+    font-size: 20px;
+    color: orange;
+    text-align: right;
+    vertical-align: text-top;
+    line-height: 20px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}

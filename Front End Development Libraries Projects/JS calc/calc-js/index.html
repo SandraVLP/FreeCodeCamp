@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <script src="./index.js"></script>
+    <title>Javascript calculator</title>
+  </head>
+  <body class="page">
+    <main>
+      <div id="container">
+          <div class="screen">
+            <input class="formulaScreen" id="display" type="text" name="display" />
+          </div>
+          <div id="buttons">
+            <input
+              class="btn"
+              id="clear"
+              type="button"
+              value="AC"
+              onclick="display.value = ''"
+            />
+            <input
+              class="btn btn-operation"
+              id="divide"
+              type="button"
+              value="/"
+              onClick="display('/')"
+            />
+            <input
+              class="btn btn-operation"
+              id="multiply"
+              type="button"
+              value="*"
+              onClick="display('*')"
+            />
+            <input
+              class="btn"
+              id="seven"
+              type="button"
+              value="7"
+              onClick="display('7')"
+            />
+            <input
+              class="btn"
+              id="eight"
+              type="button"
+              value="8"
+              onClick="display('8')"
+            />
+            <input
+              class="btn"
+              id="nine"
+              type="button"
+              value="9"
+              onClick="display('9')"
+            />
+            <input
+              class="btn btn-operation"
+              id="subtract"
+              type="button"
+              value="-"
+              onClick="display('-')"
+            />
+            <input
+              class="btn"
+              id="four"
+              type="button"
+              value="4"
+              onClick="display('4')"
+            />
+            <input
+              class="btn"
+              id="five"
+              type="button"
+              value="5"
+              onClick="display('5')"
+            />
+            <input
+              class="btn"
+              id="six"
+              type="button"
+              value="6"
+              onClick="display('6')"
+            />
+            <input
+              class="btn btn-operation"
+              id="add"
+              type="button"
+              value="+"
+              onClick="display('+')"
+            />
+            <input
+              class="btn"
+              id="one"
+              type="button"
+              value="1"
+              onClick="display('1')"
+            />
+            <input
+              class="btn"
+              id="two"
+              type="button"
+              value="2"
+              onClick="display('2')"
+            />
+            <input
+              class="btn"
+              id="three"
+              type="button"
+              value="3"
+              onClick="display('3')"
+            />
+            <input
+              class="btn btn-operation"
+              id="decimal"
+              type="button"
+              value="."
+              onClick="display('.')"
+            />
+            <input
+              class="btn"
+              id="zero"
+              type="button"
+              value="0"
+              onClick="display('0')"
+            />
+            <input
+              class="btn"
+              id="equals"
+              type="button"
+              value="="
+              onclick="display.value = eval(display.value)""
+            />
+          </div>
+      </div>
+    </main>
+  </body>
+</html>
