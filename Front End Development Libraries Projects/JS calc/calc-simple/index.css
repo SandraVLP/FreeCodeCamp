@@ -49,6 +49,7 @@ background-color: aliceblue;
 }
 
 .formulaScreen {
+    width: 312px;
     min-height: 20px;
     font-size: 20px;
     color: orange;
