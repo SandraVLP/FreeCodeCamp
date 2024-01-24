@@ -47,3 +47,14 @@ background-color: aliceblue;
  #clear {
     grid-column: span 2;
 }
+
+.formulaScreen {
+    min-height: 20px;
+    font-size: 20px;
+    color: orange;
+    text-align: right;
+    vertical-align: text-top;
+    line-height: 20px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
